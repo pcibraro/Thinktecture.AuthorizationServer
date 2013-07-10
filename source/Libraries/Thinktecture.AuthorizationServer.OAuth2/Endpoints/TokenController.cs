@@ -10,6 +10,7 @@ using System.Security.Claims;
 using System.Web.Http;
 using Thinktecture.AuthorizationServer.Interfaces;
 using Thinktecture.AuthorizationServer.Models;
+using System.Linq;
 
 namespace Thinktecture.AuthorizationServer.OAuth2
 {

@@ -25,6 +25,9 @@ namespace Thinktecture.AuthorizationServer.WebHost
         {
             var subject = GetSubject(incomingPrincipal);
             var claims = new List<Claim> { new Claim(Constants.ClaimTypes.Subject, subject) };
+            
+            if(incomingPrincipal != null && incomingPrincipal.Claims.Count() > 0)
+                claims.AddRange(incomingPrincipal.Claims.ToArray());
 
             claims.AddRange(AddInternalClaims(subject));
 

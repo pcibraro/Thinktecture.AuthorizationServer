@@ -14,6 +14,7 @@ using System.ServiceModel.Security;
 using Thinktecture.AuthorizationServer.Interfaces;
 using Thinktecture.IdentityModel.Extensions;
 using Thinktecture.IdentityModel.WSTrust;
+using System.Linq;
 
 namespace Thinktecture.AuthorizationServer.OAuth2
 {
