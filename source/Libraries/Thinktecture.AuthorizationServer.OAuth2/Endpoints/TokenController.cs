@@ -117,7 +117,8 @@ namespace Thinktecture.AuthorizationServer.OAuth2
             catch (Exception ex)
             {
                 Tracing.Error("Resource owner credential validation failed: " + ex.ToString());
-                throw;
+
+                return new HttpResponseMessage(HttpStatusCode.Unauthorized);
             }
 
             if (principal != null && principal.Identity.IsAuthenticated)

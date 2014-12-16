@@ -23,6 +23,8 @@ namespace Thinktecture.AuthorizationServer.WebHost
                 nameId = principal.FindFirst(ClaimTypes.Name);
                 if (nameId == null)
                 {
+                    Tracing.Error("No name identifier claim provided");
+
                     throw new InvalidOperationException("No nameidentifier claim");
                 }
             }
